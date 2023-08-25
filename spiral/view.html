@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="webgl-ultils.js"></script>
+        <title>Spiral</title>
+        <link rel="stylesheet" type="text/css" href="css/spiral.css">
+        <script type="x-shader/x-vertex" id="vertex-shader">
+            #ifdef GL_ES
+            precision mediump float;
+            #endif
+            attribute vec2 position;
+            varying   vec2 vertPos;
+            void main() {
+                vertPos     = position;
+                gl_Position = vec4( position, 0.0, 1.0 );
+            }
+        </script>
+        <script type="text/javascript" src="WebGL.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <canvas>Your browser does not seem to support HTML canvas.</canvas>
+    </body>
+</html>
